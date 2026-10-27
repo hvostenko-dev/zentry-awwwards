@@ -46,9 +46,9 @@ const FloatingImage = () => {
     };
 
     return (
-        <div id="story" className="min-h-dvh w-screen bg-black text-blue-50">
-            <div className="flex size-full flex-col items-center py-10 pb-24">
-                <p className="font-general text-sm uppercase md:text-[10px]">
+        <section id="prologue" className="min-h-dvh w-screen bg-black text-blue-50">
+            <div id="story" className="flex size-full flex-col items-center py-10 pb-20 sm:pb-24">
+                <p className="font-general text-xs uppercase tracking-widest md:text-[10px]">
                     the multiversal ip world
                 </p>
 
@@ -68,13 +68,13 @@ const FloatingImage = () => {
                                     onMouseUp={handleMouseLeave}
                                     onMouseEnter={handleMouseLeave}
                                     src="/img/entrance.webp"
-                                    alt="entrance.webp"
-                                    className="object-contain"
+                                    alt="Hidden Realm Entrance"
+                                    className="size-full object-cover object-center md:object-contain"
                                 />
                             </div>
                         </div>
 
-                        {/* for the rounded corner */}
+                        {/* SVG filter for rounded polygon corners */}
                         <svg
                             className="invisible absolute size-0"
                             xmlns="http://www.w3.org/2000/svg"
@@ -103,23 +103,24 @@ const FloatingImage = () => {
                     </div>
                 </div>
 
-                <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
-                    <div className="flex h-full w-fit flex-col items-center md:items-start">
-                        <p className="mt-3 max-w-sm text-center font-circular-web text-violet-50 md:text-start">
+                <div className="-mt-12 sm:-mt-28 flex w-full justify-center px-6 md:-mt-64 md:me-44 md:justify-end md:px-0">
+                    <div className="flex h-full w-fit flex-col items-center md:items-start relative z-20">
+                        <p className="mt-3 max-w-sm text-center font-circular-web text-sm sm:text-base text-violet-50 md:text-start">
                             Where realms converge, lies Zentry and the boundless pillar.
                             Discover its secrets and shape your fate amidst infinite
                             opportunities.
                         </p>
 
-                        <Button
-                            id="realm-btn"
-                            title="discover prologue"
-                            containerClass="mt-5"
-                        />
+                        <a href="#contact" className="mt-5">
+                            <Button
+                                id="realm-btn"
+                                title="discover prologue"
+                            />
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

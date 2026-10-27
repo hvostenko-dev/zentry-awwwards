@@ -19,7 +19,7 @@ const About = () => {
             },
         });
 
-        clipAnimation.to(".mask-clip-path", {
+        clipAnimation.to("#clip .about-image", {
             width: "100vw",
             height: "100vh",
             borderRadius: 0,
@@ -28,8 +28,8 @@ const About = () => {
 
     return (
         <div id="about" className="min-h-screen w-screen">
-            <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-                <p className="font-general text-sm uppercase md:text-[10px]">
+            <div className="relative mb-8 mt-24 sm:mt-36 flex flex-col items-center gap-5 px-4">
+                <p className="font-general text-xs uppercase tracking-widest md:text-[10px]">
                     Welcome to Zentry
                 </p>
 
@@ -39,8 +39,10 @@ const About = () => {
                 />
 
                 <div className="about-subtext">
-                    <p>The Game of Games begins—your life, now an epic MMORPG</p>
-                    <p className="text-gray-500">
+                    <p className="font-medium text-black">
+                        The Game of Games begins—your life, now an epic MMORPG
+                    </p>
+                    <p className="mt-1 text-gray-500 text-sm sm:text-base">
                         Zentry unites every player from countless games and platforms, both
                         digital and physical, into a unified Play Economy
                     </p>
